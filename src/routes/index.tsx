@@ -1,3 +1,4 @@
+import { OfferCountdown } from "@/components/offer-countdown";
 import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowRight,
@@ -519,6 +520,7 @@ function SalesPage() {
               </p>
             </div>
             <div className="flex flex-col justify-center bg-primary p-7 text-primary-foreground sm:p-10">
+              <OfferCountdown />
               <p className="text-sm font-bold uppercase opacity-80">
                 Oferta especial • Curso + 5 bônus
               </p>
@@ -597,17 +599,22 @@ function SalesPage() {
           <BuyButton label="Quero começar agora" light />
         </div>
       </section>
-      <footer className="bg-foreground py-10 text-background">
-        <div className="section-shell flex flex-col items-center justify-between gap-6 text-center sm:flex-row sm:text-left">
-          <div>
-            <p className="font-display text-lg font-extrabold">
-              Contador <span className="text-primary">360</span>
-            </p>
-            <p className="mt-1 text-xs opacity-60">Rotinas de um escritório contábil na prática.</p>
-          </div>
-          <p className="text-xs opacity-60">© 2026 Contador 360 • Gestão Global Contábil</p>
-        </div>
+      <footer className="bg-foreground py-7 text-background">
+        <p className="section-shell text-center text-sm font-semibold">
+          rotinas de escritório contábil 2026
+        </p>
       </footer>
+      <a
+        href="https://api.whatsapp.com/send/?phone=65974002235&text=Ol%C3%A1.%20Vi%20a%20p%C3%A1gina%20do%20curso%20de%20rotinas%20de%20escrit%C3%B3rio%20cont%C3%A1bil.%20Tenho%20interesse%20em%20comprar!&type=phone_number&app_absent=0&source_url=&context=&icebreaker=Ol%C3%A1.%20Vi%20a%20p%C3%A1gina%20do%20curso%20de%20rotinas%20de%20escrit%C3%B3rio%20cont%C3%A1bil.%20Tenho%20interesse%20em%20comprar!"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Fale pelo WhatsApp sobre o curso"
+        className="fixed bottom-5 right-5 z-50 grid size-14 place-items-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-success"
+      >
+        <svg viewBox="0 0 24 24" className="size-8" fill="currentColor" aria-hidden="true">
+          <path d="M20.52 3.48A11.9 11.9 0 0 0 12.06 0C5.47 0 .1 5.36.1 11.95c0 2.1.55 4.15 1.6 5.96L0 24l6.25-1.64a11.95 11.95 0 0 0 5.8 1.48h.01c6.59 0 11.95-5.36 11.95-11.95a11.87 11.87 0 0 0-3.49-8.41zM12.06 21.82a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.71.97.99-3.62-.24-.37a9.87 9.87 0 0 1-1.52-5.26c0-5.47 4.45-9.92 9.93-9.92a9.85 9.85 0 0 1 7.02 2.91 9.86 9.86 0 0 1 2.9 7.03c0 5.47-4.45 9.92-9.97 9.85zM17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.9-.8-1.5-1.78-1.68-2.08-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.11 3.23 5.11 4.53.71.31 1.27.49 1.71.63.72.23 1.38.2 1.9.12.58-.09 1.77-.73 2.02-1.44.25-.72.25-1.33.17-1.45-.07-.13-.27-.2-.57-.35z" />
+        </svg>
+      </a>
     </main>
   );
 }
