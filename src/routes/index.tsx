@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowRight,
+  ArrowDown,
   BarChart3,
   BookOpenCheck,
   CircleCheck,
@@ -73,21 +74,23 @@ function BuyButton({
   label = "Quero me matricular",
   light = false,
   href = checkoutUrl,
+  animated = false,
 }: {
   label?: string;
   light?: boolean;
   href?: string;
+  animated?: boolean;
 }) {
   return (
     <Button
       asChild
       variant={light ? "secondary" : "conversion"}
       size="xl"
-      className="h-auto min-h-13 whitespace-normal py-3 text-center"
+      className={`h-auto min-h-13 whitespace-normal py-3 text-center ${animated ? "cta-nudge" : ""}`}
     >
       <a href={href}>
         {label}
-        <ArrowRight />
+        {animated ? <ArrowDown /> : <ArrowRight />}
       </a>
     </Button>
   );
@@ -128,10 +131,8 @@ function SalesPage() {
         </div>
       </header>
 
-      <section id="inicio" className="hero-course relative isolate bg-sky-soft pt-28 lg:pt-32">
-        <div className="hero-course-art" aria-hidden="true" />
-        <div className="hero-course-overlay" aria-hidden="true" />
-        <div className="section-shell relative grid items-center gap-10 pb-16 lg:min-h-[680px] lg:grid-cols-2 lg:gap-12">
+      <section id="inicio" className="relative bg-sky-soft pt-28 lg:pt-32">
+        <div className="section-shell relative mx-auto max-w-4xl pb-16 text-center">
           <div className="fade-up py-8">
             <h1 className="text-4xl leading-[1.12] font-extrabold sm:text-5xl lg:text-6xl">
               Aprenda as rotinas de um escritório contábil{" "}
@@ -145,7 +146,7 @@ function SalesPage() {
             <p className="mt-4 text-sm font-semibold text-primary">
               Uma formação prática para organizar seus estudos em 4 semanas, no seu ritmo.
             </p>
-            <div className="mt-7 grid gap-3 text-sm font-semibold sm:grid-cols-2">
+            <div className="mx-auto mt-7 grid max-w-xl gap-3 text-left text-sm font-semibold sm:grid-cols-2">
               {[
                 "Para iniciantes e profissionais",
                 "Prática em software",
@@ -159,11 +160,14 @@ function SalesPage() {
               ))}
             </div>
             <div className="mt-9">
-              <BuyButton label="Quero aprender a prática contábil" href="#depoimentos-videos" />
+              <BuyButton
+                label="Quero aprender a prática contábil"
+                href="#depoimentos-videos"
+                animated
+              />
             </div>
             <p className="mt-4 text-xs text-muted-foreground">100% online • Acesso imediato.</p>
           </div>
-          <div className="hero-course-space" aria-hidden="true" />
         </div>
       </section>
       <section id="depoimentos" className="bg-sky-soft py-20 lg:py-28">
@@ -181,13 +185,7 @@ function SalesPage() {
               ["Alex", "Alex celebra o primeiro contrato com um cliente", "5"],
             ].map(([name, description, imageNumber]) => (
               <figure key={name} className="w-full max-w-[260px]">
-                <a
-                  href={`/course/aluno-${imageNumber}.png`}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`Ampliar depoimento: ${name}`}
-                  className="phone-mockup block transition-transform duration-300 hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
-                >
+                <div className="phone-mockup">
                   <div className="phone-camera" aria-hidden="true" />
                   <div className="phone-screen">
                     <img
@@ -199,12 +197,9 @@ function SalesPage() {
                     />
                   </div>
                   <div className="phone-home" aria-hidden="true" />
-                </a>
+                </div>
                 <figcaption className="mt-5 text-center">
                   <strong className="text-base">{name}</strong>
-                  <p className="mt-1 text-xs text-muted-foreground">
-                    Toque para ampliar o depoimento
-                  </p>
                 </figcaption>
               </figure>
             ))}
@@ -331,6 +326,9 @@ function SalesPage() {
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">{text}</p>
               </article>
             ))}
+          </div>
+          <div className="mt-10 text-center">
+            <BuyButton label="QUERO APRENDER TUDO ISSO" href="#oferta" />
           </div>
         </div>
       </section>
@@ -546,9 +544,6 @@ function SalesPage() {
                     style={{ width: `${discountPercent}%` }}
                   />
                 </div>
-                <p className="mt-2 text-[11px] opacity-75">
-                  Desconto calculado sobre o valor à vista.
-                </p>
               </div>
               <p className="mt-7 text-sm font-semibold">Por apenas</p>
               <div className="mt-2 flex flex-wrap items-baseline gap-x-2">
@@ -616,4 +611,3 @@ function SalesPage() {
     </main>
   );
 }
-

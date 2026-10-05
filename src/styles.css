@@ -173,28 +173,28 @@ section[id] {
   background: #8490a0;
 }
 
-.hero-course-art {
-  position: absolute;
-  z-index: -2;
-  inset: 70px 0 0 50%;
-  background: url("/course/hero-course.png") center / contain no-repeat;
+.cta-nudge {
+  animation: cta-nudge 2.8s ease-in-out infinite;
 }
-.hero-course-overlay {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  background: linear-gradient(90deg, var(--sky-soft) 0%, var(--sky-soft) 38%, transparent 65%);
+.cta-nudge:hover,
+.cta-nudge:focus-visible {
+  animation-play-state: paused;
 }
-@media (max-width: 1023px) {
-  .hero-course-art {
-    inset: auto 0 20px;
-    height: 360px;
+@keyframes cta-nudge {
+  0%,
+  65%,
+  100% {
+    transform: translateY(0);
   }
-  .hero-course-overlay {
-    background: linear-gradient(180deg, var(--sky-soft) 0%, var(--sky-soft) 50%, transparent 85%);
+  75% {
+    transform: translateY(-5px);
   }
-  .hero-course-space {
-    height: 330px;
+  85% {
+    transform: translateY(2px);
   }
 }
-
+@media (prefers-reduced-motion: reduce) {
+  .cta-nudge {
+    animation: none;
+  }
+}
