@@ -1,7 +1,6 @@
 import { OfferCountdown } from "@/components/offer-countdown";
 import { createFileRoute } from "@tanstack/react-router";
 import {
-  ArrowRight,
   ArrowDown,
   BarChart3,
   BookOpenCheck,
@@ -91,7 +90,7 @@ function BuyButton({
     >
       <a href={href}>
         {label}
-        {animated ? <ArrowDown /> : <ArrowRight />}
+        <ArrowDown />
       </a>
     </Button>
   );
@@ -371,7 +370,7 @@ function SalesPage() {
             </Accordion>
           </div>
           <div className="mt-6 text-center">
-            <BuyButton label="Quero acessar o curso completo" />
+            <BuyButton label="Quero acessar o curso completo" href="#oferta" />
           </div>
         </div>
       </section>
@@ -620,3 +619,4 @@ function SalesPage() {
     </main>
   );
 }
+
