@@ -198,3 +198,7 @@ section[id] {
     animation: none;
   }
 }
+
+main > section + section {
+  border-top: 1px solid color-mix(in oklab, var(--border) 55%, transparent);
+}

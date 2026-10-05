@@ -1,3 +1,4 @@
+import { CourseLaptop } from "@/components/course-laptop";
 import { OfferCountdown } from "@/components/offer-countdown";
 import { createFileRoute } from "@tanstack/react-router";
 import {
@@ -143,22 +144,6 @@ function SalesPage() {
               tela do computador e desenvolva segurança para buscar oportunidades ou estruturar seu
               próprio escritório.
             </p>
-            <p className="mt-4 text-sm font-semibold text-primary">
-              Uma formação prática para organizar seus estudos em 4 semanas, no seu ritmo.
-            </p>
-            <div className="mx-auto mt-7 grid max-w-xl gap-3 text-left text-sm font-semibold sm:grid-cols-2">
-              {[
-                "Para iniciantes e profissionais",
-                "Prática em software",
-                "Certificado de 100 horas",
-                "Acesso vitalício",
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-2.5">
-                  <CircleCheck className="size-5 shrink-0 text-success" />
-                  {item}
-                </div>
-              ))}
-            </div>
             <div className="mt-9">
               <BuyButton
                 label="Quero aprender a prática contábil"
@@ -340,6 +325,7 @@ function SalesPage() {
             title="As rotinas do escritório, em uma formação completa"
             text="Explore os módulos e veja os procedimentos apresentados na grade do curso."
           />
+          <CourseLaptop />
           <div className="mx-auto mt-7 max-w-4xl rounded-xl border border-border bg-card px-5 sm:px-8">
             <Accordion type="multiple">
               {modules.map((module, index) => (
@@ -619,4 +605,3 @@ function SalesPage() {
     </main>
   );
 }
-
