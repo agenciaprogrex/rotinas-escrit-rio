@@ -132,7 +132,7 @@ function SalesPage() {
       </header>
 
       <section id="inicio" className="relative bg-sky-soft pt-28 lg:pt-32">
-        <div className="section-shell relative mx-auto max-w-4xl pb-16 text-center">
+        <div className="section-shell relative mx-auto max-w-4xl pb-8 text-center">
           <div className="fade-up py-8">
             <h1 className="text-4xl leading-[1.12] font-extrabold sm:text-5xl lg:text-6xl">
               Aprenda as rotinas de um escritório contábil{" "}
@@ -170,13 +170,13 @@ function SalesPage() {
           </div>
         </div>
       </section>
-      <section id="depoimentos" className="bg-sky-soft py-20 lg:py-28">
+      <section id="depoimentos" className="bg-sky-soft py-10 lg:py-12">
         <div className="section-shell">
           <SectionTitle
             title="Veja a transformação que o curso gerou em nossos alunos"
             text="Primeiro emprego, novos clientes e o próprio escritório: veja os relatos compartilhados pelos alunos."
           />
-          <div className="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-12">
+          <div className="mt-7 flex flex-wrap justify-center gap-x-8 gap-y-8">
             {[
               ["Um novo escritório", "Relato de aluno que abriu seu próprio escritório", "1"],
               ["Dagmar", "Dagmar conta como conseguiu seu primeiro emprego na área", "2"],
@@ -206,10 +206,10 @@ function SalesPage() {
           </div>
         </div>
       </section>
-      <section id="depoimentos-videos" className="py-20 lg:py-24">
+      <section id="depoimentos-videos" className="py-10 lg:py-12">
         <div className="section-shell">
           <SectionTitle title="Ouça os resultados de nossos alunos." />
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
+          <div className="mt-7 grid gap-8 md:grid-cols-2">
             {[
               {
                 id: "6yEKyYVSKbQ",
@@ -273,14 +273,14 @@ function SalesPage() {
         </div>
       </section>
 
-      <section id="beneficios" className="py-20 lg:py-28">
+      <section id="beneficios" className="py-10 lg:py-12">
         <div className="section-shell">
           <SectionTitle
             eyebrow="Da teoria para a prática"
             title="Transforme conhecimento em segurança para atuar"
             text="A falta de prática pode dificultar o primeiro estágio, um novo emprego ou a abertura do próprio escritório. O Contador 360 mostra os procedimentos que fazem parte do dia a dia da profissão."
           />
-          <div className="mt-12 grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-3">
+          <div className="mt-7 grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-3">
             {[
               [
                 MessageCircleQuestion,
@@ -310,7 +310,7 @@ function SalesPage() {
               );
             })}
           </div>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
               ["100% online", "Estude onde e quando quiser, no computador, smartphone ou tablet."],
               ["Conteúdo atualizado", "Continue aprendendo com as atualizações do treinamento."],
@@ -327,20 +327,20 @@ function SalesPage() {
               </article>
             ))}
           </div>
-          <div className="mt-10 text-center">
+          <div className="mt-6 text-center">
             <BuyButton label="QUERO APRENDER TUDO ISSO" href="#oferta" />
           </div>
         </div>
       </section>
 
-      <section id="conteudo" className="bg-sky-soft py-20 lg:py-28">
+      <section id="conteudo" className="bg-sky-soft py-10 lg:py-12">
         <div className="section-shell">
           <SectionTitle
             eyebrow="Conteúdo do Contador 360"
             title="As rotinas do escritório, em uma formação completa"
             text="Explore os módulos e veja os procedimentos apresentados na grade do curso."
           />
-          <div className="mx-auto mt-12 max-w-4xl rounded-xl border border-border bg-card px-5 sm:px-8">
+          <div className="mx-auto mt-7 max-w-4xl rounded-xl border border-border bg-card px-5 sm:px-8">
             <Accordion type="multiple">
               {modules.map((module, index) => (
                 <AccordionItem key={module.title} value={`module-${index}`}>
@@ -369,19 +369,19 @@ function SalesPage() {
               ))}
             </Accordion>
           </div>
-          <div className="mt-10 text-center">
+          <div className="mt-6 text-center">
             <BuyButton label="Quero acessar o curso completo" />
           </div>
         </div>
       </section>
 
-      <section className="py-20 lg:py-28">
+      <section className="py-10 lg:py-12">
         <div className="section-shell">
           <SectionTitle
             eyebrow="Quem vai guiar você"
             title="Experiência profissional compartilhada na prática"
           />
-          <div className="mt-12 grid items-center gap-10 lg:grid-cols-2">
+          <div className="mt-7 grid items-center gap-10 lg:grid-cols-2">
             <img
               src="/course/professor.png"
               alt="Professor Francisco Lira, do Contador 360"
@@ -406,7 +406,7 @@ function SalesPage() {
               </p>
             </div>
           </div>
-          <div className="mt-14 grid items-center gap-10 border-t border-border pt-14 lg:grid-cols-2">
+          <div className="mt-8 grid items-center gap-10 border-t border-border pt-8 lg:grid-cols-2">
             <div>
               <p className="text-sm font-bold uppercase text-primary">
                 Parceria Alonso Freire • 2026
@@ -439,13 +439,13 @@ function SalesPage() {
         </div>
       </section>
 
-      <section id="bonus" className="border-y border-border bg-sky-soft py-20 lg:py-28">
+      <section id="bonus" className="border-y border-border bg-sky-soft py-10 lg:py-12">
         <div className="section-shell">
           <SectionTitle
             title="Mais ferramentas para sua prática e sua carreira"
             text="Além do curso completo, você recebe os mesmos cinco bônus apresentados no Contador 360. Liberação após os 7 dias de garantia."
           />
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-7 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {bonuses.map((bonus, index) => (
               <article
                 key={bonus.image}
@@ -479,7 +479,7 @@ function SalesPage() {
               </article>
             ))}
           </div>
-          <div className="mx-auto mt-10 max-w-2xl rounded-lg border border-success/20 bg-success-soft p-6 text-center">
+          <div className="mx-auto mt-6 max-w-2xl rounded-lg border border-success/20 bg-success-soft p-6 text-center">
             <p className="font-bold">R$ 407,00 em bônus incluídos na sua matrícula</p>
             <p className="mt-2 text-sm leading-6 text-muted-foreground">
               Curso de IRPF, comunidade e três guias para acompanhar seus próximos passos.
@@ -488,10 +488,10 @@ function SalesPage() {
         </div>
       </section>
 
-      <section id="oferta" className="bg-sky-soft py-20 lg:py-28">
+      <section id="oferta" className="bg-sky-soft py-10 lg:py-12">
         <div className="section-shell">
           <SectionTitle title="Comece agora com acesso vitalício" />
-          <div className="mx-auto mt-12 grid max-w-5xl overflow-hidden rounded-xl border border-primary/20 bg-card shadow-[var(--shadow-card)] lg:grid-cols-[1.05fr_.95fr]">
+          <div className="mx-auto mt-7 grid max-w-5xl overflow-hidden rounded-xl border border-primary/20 bg-card shadow-[var(--shadow-card)] lg:grid-cols-[1.05fr_.95fr]">
             <div className="p-7 sm:p-10">
               <h3 className="text-xl font-bold">Tudo o que você recebe</h3>
               <ul className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -566,8 +566,8 @@ function SalesPage() {
         </div>
       </section>
 
-      <section id="faq" className="py-20 lg:py-28">
-        <div className="section-shell grid gap-12 lg:grid-cols-[.7fr_1.3fr] lg:gap-20">
+      <section id="faq" className="py-10 lg:py-12">
+        <div className="section-shell grid gap-7 lg:grid-cols-[.7fr_1.3fr] lg:gap-12">
           <div>
             <p className="text-sm font-extrabold uppercase text-primary">Perguntas frequentes</p>
             <h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">Ainda ficou alguma dúvida?</h2>
@@ -586,7 +586,7 @@ function SalesPage() {
           </Accordion>
         </div>
       </section>
-      <section className="bg-primary py-16 text-primary-foreground">
+      <section className="bg-primary py-10 text-primary-foreground">
         <div className="section-shell flex flex-col items-center justify-between gap-8 text-center md:flex-row md:text-left">
           <div>
             <h2 className="text-3xl font-extrabold">Sua prática contábil começa aqui.</h2>
