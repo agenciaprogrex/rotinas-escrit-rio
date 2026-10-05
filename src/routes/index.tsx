@@ -136,13 +136,13 @@ function SalesPage() {
         <div className="section-shell relative mx-auto max-w-4xl pb-8 text-center">
           <div className="fade-up py-8">
             <h1 className="text-4xl leading-[1.12] font-extrabold sm:text-5xl lg:text-6xl">
-              Aprenda as rotinas de um escritório contábil{" "}
-              <span className="text-primary">passo a passo</span>
+              Saia da teoria e <span className="text-primary-strong">aprenda na prática</span> a
+              rotina de um escritório contábil, mesmo que você ainda{" "}
+              <span className="text-primary-strong">não tenha experiência.</span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-ink-soft">
-              Do registro de empresas às rotinas fiscais e trabalhistas: veja os procedimentos na
-              tela do computador e desenvolva segurança para buscar oportunidades ou estruturar seu
-              próprio escritório.
+            <p className="mt-6 text-lg font-semibold leading-8 text-ink-soft sm:text-xl">
+              <span className="font-extrabold text-primary-strong">Domine em 4 semanas</span> as
+              principais tarefas dos departamentos Contábil, Fiscal, Pessoal e Legalização.
             </p>
             <div className="mt-9">
               <BuyButton
@@ -588,7 +588,7 @@ function SalesPage() {
       </section>
       <footer className="bg-foreground py-7 text-background">
         <p className="section-shell text-center text-sm font-semibold">
-          rotinas de escritório contábil 2026
+          Direitos reservados: <strong>Rotinas de escritório contábil 2026</strong> - Contador 360
         </p>
       </footer>
       <a
@@ -605,3 +605,4 @@ function SalesPage() {
     </main>
   );
 }
+
