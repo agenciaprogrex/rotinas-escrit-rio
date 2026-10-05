@@ -253,7 +253,7 @@ function SalesPage() {
                   />
                 </div>
                 <figcaption className="mt-6 text-center font-display text-xl font-extrabold leading-8 text-primary-strong sm:text-2xl">
-                  {video.title}
+                  “{video.title}”
                 </figcaption>
               </figure>
             ))}
@@ -616,3 +616,4 @@ function SalesPage() {
     </main>
   );
 }
+
