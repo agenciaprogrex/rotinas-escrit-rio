@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export function getOfferCountdown(now: Date) {
   const parts = new Intl.DateTimeFormat("pt-BR", {
-    timeZone: "America/Cuiaba",
+    timeZone: "America/Sao_Paulo",
     day: "2-digit",
     month: "2-digit",
     year: "numeric",
@@ -36,9 +36,9 @@ export function OfferCountdown() {
   }, []);
   return (
     <div className="mb-6 rounded-xl border border-amber-300/50 bg-amber-50 p-5 text-center text-slate-900">
-      <p className="text-lg font-extrabold uppercase text-amber-800">A oferta encerra hoje!</p>
+      <p className="text-lg font-extrabold text-amber-800">A oferta encerra hoje!</p>
       <p className="mt-1 text-sm font-semibold">
-        {countdown?.date ?? "Hoje"} • até 23h59, horário de Cuiabá
+        {countdown?.date ?? "Hoje"} • até 23h59, horário de Brasília.
       </p>
       <div
         className="mt-4 flex justify-center gap-3"

@@ -529,9 +529,11 @@ function SalesPage() {
                 R$ 697,00
               </s>
               <div className="mt-6">
+                <p className="mb-3 font-display text-2xl font-extrabold leading-tight text-[#a7f3b9] sm:text-3xl">
+                  ECONOMIZE HOJE R$ 500,00
+                </p>
                 <div className="flex items-center justify-between gap-3 text-xs font-bold">
                   <span>71,74% de desconto</span>
-                  <span>Economize R$ 500,00</span>
                 </div>
                 <div
                   role="progressbar"
@@ -542,7 +544,7 @@ function SalesPage() {
                   className="mt-3 h-3 overflow-hidden rounded-full bg-primary-foreground/20"
                 >
                   <div
-                    className="h-full rounded-full bg-primary-foreground"
+                    className="h-full rounded-full bg-[#25D366]"
                     style={{ width: `${discountPercent}%` }}
                   />
                 </div>
