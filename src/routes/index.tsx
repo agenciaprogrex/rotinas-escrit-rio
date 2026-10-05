@@ -213,10 +213,7 @@ function SalesPage() {
       </section>
       <section id="depoimentos-videos" className="py-20 lg:py-24">
         <div className="section-shell">
-          <SectionTitle
-            title="Veja nossos alunos em vídeo"
-            text="Conheça as experiências de quem aprendeu a prática contábil com o Contador 360."
-          />
+          <SectionTitle title="Ouça os resultados de nossos alunos." />
           <div className="mt-12 grid gap-8 md:grid-cols-2">
             {[
               {
@@ -255,7 +252,7 @@ function SalesPage() {
                     className="aspect-video h-auto w-full rounded-xl border-0"
                   />
                 </div>
-                <figcaption className="mt-5 text-center text-base font-bold leading-7">
+                <figcaption className="mt-6 text-center font-display text-xl font-extrabold leading-8 text-primary-strong sm:text-2xl">
                   {video.title}
                 </figcaption>
               </figure>
