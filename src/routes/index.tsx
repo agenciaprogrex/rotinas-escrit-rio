@@ -3,7 +3,6 @@ import { OfferCountdown } from "@/components/offer-countdown";
 import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowDown,
-  BarChart3,
   BookOpenCheck,
   CircleCheck,
   ShieldCheck,
@@ -59,18 +58,6 @@ const features = [
   "Acesso no computador, celular ou tablet",
 ];
 
-function Brand() {
-  return (
-    <a href="#inicio" className="flex items-center gap-2.5" aria-label="Contador 360, início">
-      <span className="grid size-9 place-items-center rounded-md bg-primary text-primary-foreground">
-        <BarChart3 className="size-5" />
-      </span>
-      <span className="font-display text-lg font-extrabold">
-        Contador <span className="text-primary">360</span>
-      </span>
-    </a>
-  );
-}
 function BuyButton({
   label = "Quero me matricular",
   light = false,
@@ -120,11 +107,18 @@ function SalesPage() {
         Exclusivo para Estudantes, recém-formados que querem aprender a Prática de um Escritório
         Contábil.
       </div>
-      <header className="relative z-40 border-b border-border/80 bg-background/95 backdrop-blur">
-        <div className="section-shell flex h-18 items-center justify-between">
-          <Brand />
+      <header className="relative z-40 border-b border-border/80 bg-slate-950 text-white">
+        <div className="section-shell flex flex-col items-center justify-center gap-5 py-6">
+          <img
+            src="/course/logo-contador360.png"
+            alt="Contador 360"
+            width={768}
+            height={172}
+            className="h-auto w-64 max-w-full sm:w-80"
+            fetchPriority="high"
+          />
           <nav
-            className="hidden items-center gap-7 text-sm font-semibold text-ink-soft lg:flex"
+            className="hidden items-center gap-7 text-sm font-semibold text-white/80 lg:flex"
             aria-label="Navegação principal"
           >
             {navigation.map(([label, href]) => (
