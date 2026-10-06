@@ -202,3 +202,26 @@ section[id] {
 main > section + section {
   border-top: 1px solid color-mix(in oklab, var(--border) 55%, transparent);
 }
+
+@media (max-width: 767px) {
+  .course-stats { position: relative; }
+  .course-stats::before,
+  .course-stats::after {
+    content: "";
+    position: absolute;
+    background: var(--border);
+    pointer-events: none;
+  }
+  .course-stats::before {
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+  }
+  .course-stats::after {
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+  }
+}

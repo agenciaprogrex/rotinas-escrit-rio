@@ -241,7 +241,7 @@ function SalesPage() {
         </div>
       </section>
       <section className="border-y border-border py-7">
-        <div className="section-shell grid grid-cols-2 gap-6 text-center md:grid-cols-4 md:divide-x md:divide-border">
+        <div className="course-stats section-shell grid grid-cols-2 gap-6 text-center md:grid-cols-4 md:divide-x md:divide-border">
           {[
             ["100 horas", "no certificado"],
             ["11 módulos", "na grade do curso"],
@@ -605,4 +605,5 @@ function SalesPage() {
     </main>
   );
 }
+
 
