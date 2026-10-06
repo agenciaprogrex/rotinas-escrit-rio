@@ -5,7 +5,7 @@ export function TestimonialVideo({ id, title }: { id: string; title: string }) {
   const [playing, setPlaying] = useState(false);
   return playing ? (
     <iframe
-      src={`https://www.youtube.com/embed/${id}?autoplay=1&playsinline=1&fs=0&rel=0&iv_load_policy=3&hl=pt-BR`}
+      src={`https://www.youtube.com/embed/${id}?autoplay=1&playsinline=1&fs=0&rel=0&iv_load_policy=3&hl=pt-BR&cc_load_policy=0`}
       title={title}
       width="820"
       height="615"
@@ -37,3 +37,4 @@ export function TestimonialVideo({ id, title }: { id: string; title: string }) {
     </button>
   );
 }
+
