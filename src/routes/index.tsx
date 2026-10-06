@@ -219,14 +219,13 @@ function SalesPage() {
               <figure key={video.id} className="flex flex-col">
                 <div className="overflow-hidden rounded-2xl border border-foreground/20 bg-foreground p-2 shadow-[var(--shadow-card)]">
                   <iframe
-                    src={`https://www.youtube.com/embed/${video.id}`}
+                    src={`https://www.youtube.com/embed/${video.id}?playsinline=1&fs=0&rel=0&iv_load_policy=3&hl=pt-BR`}
                     title={`Depoimento de ${video.name}: ${video.title}`}
                     width="820"
                     height="615"
                     loading="lazy"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
                     className="aspect-video h-auto w-full rounded-xl border-0"
                   />
                 </div>
