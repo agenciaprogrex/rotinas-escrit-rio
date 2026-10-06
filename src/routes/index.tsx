@@ -116,7 +116,11 @@ function SectionTitle({
 function SalesPage() {
   return (
     <main className="overflow-hidden bg-background">
-      <header className="fixed inset-x-0 top-0 z-40 border-b border-border/80 bg-background/95 backdrop-blur">
+      <div className="bg-[#c9ed59] px-4 py-4 text-center text-sm font-extrabold leading-6 text-slate-950 sm:text-base">
+        Exclusivo para Estudantes, recém-formados que querem aprender a Prática de um Escritório
+        Contábil.
+      </div>
+      <header className="relative z-40 border-b border-border/80 bg-background/95 backdrop-blur">
         <div className="section-shell flex h-18 items-center justify-between">
           <Brand />
           <nav
@@ -132,7 +136,7 @@ function SalesPage() {
         </div>
       </header>
 
-      <section id="inicio" className="relative bg-sky-soft pt-28 lg:pt-32">
+      <section id="inicio" className="relative bg-sky-soft pt-6 lg:pt-10">
         <div className="section-shell relative mx-auto max-w-4xl pb-8 text-center">
           <div className="fade-up py-8">
             <h1 className="text-4xl leading-[1.12] font-extrabold sm:text-5xl lg:text-6xl">
@@ -605,5 +609,3 @@ function SalesPage() {
     </main>
   );
 }
-
-
