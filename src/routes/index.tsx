@@ -421,7 +421,7 @@ function SalesPage() {
         <div className="section-shell">
           <SectionTitle
             title="Mais ferramentas para sua prática e sua carreira"
-            text="Além do curso completo, você recebe os mesmos cinco bônus apresentados no Contador 360. Liberação após os 7 dias de garantia."
+            text="Além do curso completo, você recebe os mesmos cinco bônus apresentados no Contador 360."
           />
           <div className="mt-7 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {bonuses.map((bonus, index) => (
@@ -597,3 +597,4 @@ function SalesPage() {
     </main>
   );
 }
+
